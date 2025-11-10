@@ -95,7 +95,7 @@ export const ongoingWork: ProjectsList[] = [
       description: 'I lead the project to design a power supply and control hat, compatible with the Rasberry Pi and UP Xtreme i14 SBCs. ' +
                    'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor rails, ' + 
                    'overcurrent, undervoltage, and overtemperature protection circuits, and voltage, current, and temperature monitoring.',
-      link: '/PHat/',
+      // link: '/PHat/',
     },
     {
       image: hopperv2Image,
@@ -103,7 +103,7 @@ export const ongoingWork: ProjectsList[] = [
       description: "During the hardware tests for the Kinodynamic MPC paper, we found quite a few minor issues with the robot that added up to make working " + 
       'with the robot rather frustrating. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
-      link: '/hopperv2/',
+      // link: '/hopperv2/',
 
     },
     {
@@ -112,7 +112,7 @@ export const ongoingWork: ProjectsList[] = [
       description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed" +  
                    "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
                    "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. ",
-      link: '/sfb/',
+      // link: '/sfb/',
     },
     {
       image: gearboxImage,
@@ -121,7 +121,7 @@ export const ongoingWork: ProjectsList[] = [
                    " and torque requirements necessary. I therefore designed a lightweight gearmotor module using a drone motor as the base," + 
                    " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
                    " rated torque of 3Nm." ,
-      link: '/gearbox//',
+      // link: '/gearbox//',
     }
   ]},
 
