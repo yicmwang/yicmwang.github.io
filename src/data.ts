@@ -75,7 +75,7 @@ import { type ProjectsList } from '@/types';
 // import sevaImage from '@/assets/seva.jpeg'
 import mpccbfImage from '@/assets/tkImage.gif'
 import { hasAssetPropagationFlag } from 'node_modules/astro/dist/content/utils';
-// import marlImage from '@/assets/marl.webp'
+import phatImage from '@/assets/PHat.jpg'
 // import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
@@ -87,14 +87,23 @@ export const ongoingWork: ProjectsList[] = [
     title: 'Ongoing and Unpublished Work',
     items: [
     {
-      // image: mpccbfImage,
+      image: phatImage,
       title: 'Power Hat for Computing Module in Bipedal Robot',
       info: 'Power Supply, Protection, and Monitoring Hat for Robot Onboard SBC',
       description: 'I lead the project to design a power supply and control hat, compatible with the Rasberry Pi and UP Xtreme i14 SBCs. ' +
-                   'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor chains, ' + 
-                   'overcurrent, undervoltage, and overtemperature protection circuits, and a voltage, current, and temperature moinotor system.',
+                   'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor rails, ' + 
+                   'overcurrent, undervoltage, and overtemperature protection circuits, and voltage, current, and temperature monitoring.',
       // link: '',
     },
+    {
+      // image: ,
+      title: "Hopper V2",
+      info: '',
+      description: "During the hardware tests for the Kinodynamic MPC paper, we found quite a few minor issues with the robot that added up to make working " + 
+      'with the robot kind of hard. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
+      'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
+
+    }
   ]},
 
 ];
