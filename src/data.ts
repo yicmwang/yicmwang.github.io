@@ -1,5 +1,5 @@
 //// This is the data for the hero section
-import profilePicture from '@/assets/me.png'
+import profilePicture from '@/assets/me.jpg'
 export const heroBlurb = {
   profilePicture: profilePicture,
   paragraphs: [
@@ -79,6 +79,26 @@ import { hasAssetPropagationFlag } from 'node_modules/astro/dist/content/utils';
 // import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
+
+
+
+export const ongoingWork: ProjectsList[] = [
+  {
+    title: 'Ongoing and Unpublished Work',
+    items: [
+    {
+      // image: mpccbfImage,
+      title: 'Power Hat for Computing Module in Bipedal Robot',
+      info: 'Power Supply, Protection, and Monitoring Hat for Robot Onboard SBC',
+      description: 'I lead the project to design a power supply and control hat, compatible with the Rasberry Pi and UP Xtreme i14 SBCs. ' +
+                   'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor chains, ' + 
+                   'overcurrent, undervoltage, and overtemperature protection circuits, and a voltage, current, and temperature moinotor system.',
+      // link: '',
+    },
+  ]},
+
+];
+
 
 export const projectsLists: ProjectsList[] = [
   {

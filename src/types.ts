@@ -34,7 +34,7 @@ export interface ProjectInfo {
   title: string,
   info?: string,
   description: string,
-  link: string,
+  link?: string,
   disabled?: boolean,
   hide?: boolean,
 };
