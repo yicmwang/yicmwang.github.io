@@ -19,6 +19,7 @@ export interface ResearchInfo {
   image: ImageMetadata;
   dontOptimizeImage?: boolean,
   title: string,
+  conference: string,
   journal: string,
   time: string,
   link: string,

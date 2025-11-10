@@ -36,138 +36,41 @@ export const socials: Socials[] = [
 
 //// This is the data for the research works
 import { type ResearchInfo } from '@/types';
-import splanningImage from '@/assets/splanning.png'
-import sparrowsImage from '@/assets/sparrows.jpg'
-import selmapImage from '@/assets/sel_map.png'
+import exoImage from '@/assets/exoImage.png'
+// import sparrowsImage from '@/assets/sparrows.jpg'
+// import selmapImage from '@/assets/sel_map.png'
 
 export const research: ResearchInfo[] = [
   {
-    image: splanningImage,
-    title: 'Let\'s Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat',
+    image: exoImage,
+    title: 'Human-Interface Dynamics of Knee Exoskeletons with Lateral and Anteroposterior Attachment',
     authors: [
-      'Jonathan Michaux*',
-      'Seth Isaacson*',
+      'Yichen Wang',
+      'José Montes Pérez',
       'Challen Enninful Adu',
-      'Adam Li',
-      'Rahul Kashyap Swayampakula',
-      'Parker Ewen',
-      'Sean Rice',
-      'Katherine A. Skinner',
-      'Ram Vasudevan',
+      'Robert D Gregg',
+      'Gray C. Thomas',
     ],
-    journal: 'IEEE Transactions on Robotics (IEEE T-RO)',
+    journal: '2025 International Conference On Rehabilitation Robotics (ICORR)',
     time: '2025',
-    link: 'https://roahmlab.github.io/splanning/',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11062962',
     review: false,
-  },
-  {
-    image: sparrowsImage,
-    title: 'Safe Planning for Articulated Robots Using Reachability-based Obstacle Avoidance With Spheres',
-    authors: [
-      'Jonathan Michaux',
-      'Adam Li',
-      'Qingyi Chen',
-      'Che Chen',
-      'Ram Vasudevan',
-    ],
-    journal: 'Proceedings of Robotics: Science and Systems (RSS)',
-    time: '2024',
-    link: 'https://roahmlab.github.io/sparrows/',
-  },
-  {
-    image: selmapImage,
-    title: 'These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots',
-    authors: [
-      'Parker Ewen',
-      'Adam Li',
-      'Yuxin Chen',
-      'Steven Hong',
-      'Ram Vasudevan',
-    ],
-    journal: 'IEEE Robotics and Automation Letters (IEEE RA-L)',
-    time: '2022',
-    link: 'https://roahmlab.github.io/sel_map/',
   },
 ];
 
 //// This is the data for the projects
 import { type ProjectsList } from '@/types';
-import sevaImage from '@/assets/seva.jpeg'
-import zonopyImage from '@/assets/zonopy.webp'
-import marlImage from '@/assets/marl.webp'
-import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
+// import sevaImage from '@/assets/seva.jpeg'
+// import zonopyImage from '@/assets/zonopy.webp'
+// import marlImage from '@/assets/marl.webp'
+// import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
 // import rtdImage from '@/assets/rtd.gif'
-import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
+// import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
 export const projectsLists: ProjectsList[] = [
   {
     title: 'Contributor',
     items: [
-    {
-      image: zonopyImage,
-      dontOptimizeImage: true,
-      title: 'Zonopy and zonopy-robots',
-      info: 'A Python library for reachable set computation',
-      description:
-        'Zonopy enables the computation of continuous sets (intervals, zonotops, and polynomial zonotopes), and '+
-        'zonopy-robots introduces method extensions and algorithms for robotics. As one of the primary contributors, I\'ve ' +
-        'continued to expand on and improve these libraries for usability and performance.',
-      link: 'https://roahmlab.github.io/zonopy-robots/',
-    },
-    {
-      // image: rtdImage,
-      dontOptimizeImage: true,
-      title: 'RTD-Code unified toolkit',
-      info: 'A unified architecture and codebase for the Reachbility-based Trajectory Design Projects at ROAHM Lab',
-      description: 'RTD-Code is a unified architecture and codebase for the Reachability-based Trajectory Design Projects at ROAHM Lab. ' +
-        'It was designed to be modular and extensible, allowing for easy integration of new algorithms and methods. ' +
-        'The MATLAB version of the toolkit was built on top of CORA, and the Python version is built on top of the Zonopy and zonopy-robots libraries. '+
-        'The goal of the toolkit was to provide a high-level prototyping interface for working with reachable set constraints and trajectory design in a receding-horizon planner.',
-      link: 'https://roahmlab.github.io/rtd-ng/',
-      hide: true,
-    },
-    {
-      image: sevaImage,
-      title: 'SEVA: Socio-Ecological Visual Analytics',
-      info: 'A data and knowledge management framework with a dynamic dashboard for big data analysis.',
-      description: 'I was part of the frontend team at the Center for Architecture Science and Ecology (CASE) at Rensselaer in 2018, where I implemented UI and UX elements and helped migrate data visualization and analysis code away from unmaintained libraries.',
-      link: 'https://www.cea.yale.edu/research-frameworks/seva',
-    },
-  ]},
-  {
-    title: 'Select Projects',
-    items: [
-    {
-      image: lineartDiffusionImage,
-      dontOptimizeImage: true,
-      title: 'Generative Animation Inbetweening',
-      info: 'Diffusion modeling 2D animation like a trajectory to address animators\' needs',
-      description: 
-        'For animations, most generative video models struggle with precision and introduce stylistic changes or errors that are more expensive to fix than simply redrawing from scratch. ' +
-        'I built a model focused on adhering closely to provided keyframes and breakdowns (partial keyframes) to deliver hand‑ready and easily-correctable frames for animators.',
-      link: '',
-      disabled: true,
-    },
-    {
-      image: marlImage,
-      dontOptimizeImage: true,
-      title: 'Multi-Agent Reinforcement Learning to Solve Collaborative Escape-Room Style Tasks',
-      info: 'Will agents learn to communicate and escape from a simplified escape-room style game?',
-      description: 'For our final project for EECS692 Advanced AI at Michigan, we developed a simplified model for escape-room style tasks, ' +
-        'and implemented it as an environment to perform multi-agent reinforcement learning. Puzzle rooms are chained together to create a larger escape-room style task. ',
-      link: 'https://github.com/lattimer7/EECS692Final',
-    },
-    {
-      image: ddpgFetchImage,
-      dontOptimizeImage: true,
-      title: 'Reinforcement Learning using DDPG for Robotic Grasping',
-      info: 'Exploring reward shaping, DDPG, and RL for manipulation',
-      description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm ' +
-        'to train a robotic manipulator to grasp in a custom OpenAI Gym environment. The goal was to grasp a block on the table without moving it and reward shaping was ' +
-        'employed to learn this. Through the inclusion of regularization, we demonstrated superior results over the baseline implementation. ',
-      link: '',
-      disabled: true,
-    },
     {
       title: 'CleanTwrpTar',
       info: 'Basic C program written to recover my corrupted phone backups',
