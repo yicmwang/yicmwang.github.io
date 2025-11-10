@@ -76,7 +76,8 @@ import { type ProjectsList } from '@/types';
 import mpccbfImage from '@/assets/tkImage.gif'
 import { hasAssetPropagationFlag } from 'node_modules/astro/dist/content/utils';
 import phatImage from '@/assets/PHat.jpg'
-// import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
+import hopperv2Image from '@/assets/hopperv2.webp'
+import sfbImage from '@/assets/sfbtail.webp'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
@@ -96,13 +97,19 @@ export const ongoingWork: ProjectsList[] = [
       // link: '',
     },
     {
-      // image: ,
+      image: hopperv2Image,
       title: "Hopper V2",
-      info: '',
       description: "During the hardware tests for the Kinodynamic MPC paper, we found quite a few minor issues with the robot that added up to make working " + 
       'with the robot kind of hard. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
 
+    },
+    {
+      image: sfbImage,
+      title: "Spherical Five Bar (SFB) linkage based tail module",
+      description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed" +  
+                   "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
+                   "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. "
     }
   ]},
 
