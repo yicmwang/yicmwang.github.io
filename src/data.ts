@@ -78,6 +78,7 @@ import { hasAssetPropagationFlag } from 'node_modules/astro/dist/content/utils';
 import phatImage from '@/assets/PHat.jpg'
 import hopperv2Image from '@/assets/hopperv2.webp'
 import sfbImage from '@/assets/sfbtail.webp'
+import gearboxImage from '@/assets/gearbox.png'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
@@ -100,7 +101,7 @@ export const ongoingWork: ProjectsList[] = [
       image: hopperv2Image,
       title: "Hopper V2",
       description: "During the hardware tests for the Kinodynamic MPC paper, we found quite a few minor issues with the robot that added up to make working " + 
-      'with the robot kind of hard. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
+      'with the robot rather frustrating. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
 
     },
@@ -110,6 +111,14 @@ export const ongoingWork: ProjectsList[] = [
       description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed" +  
                    "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
                    "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. "
+    },
+    {
+      image: gearboxImage,
+      title: "Lightweight QDD motor module for tail",
+      description: "During the initial conceptualization for the tail module, I realized that no motor module on the market met the specific mass"+
+                   " and torque requirements necessary. I therefore designed a lightweight gearmotor module using a drone motor as the base," + 
+                   " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
+                   " rated torque of 3Nm."
     }
   ]},
 
@@ -125,7 +134,7 @@ export const projectsLists: ProjectsList[] = [
       title: 'Online Adaptive ICCBF',
       info: 'Learning to Refine Input Constrained Control Barrier Functions via Uncertainty-Aware Online Parameter Adaptation',
       description: 'I helped Taekyung Kim write simple a 3D quadcopter model and controller for the adaptive ICCBF controller as a part of a course project. ' +
-                   'Although I did not contribute enough work for authorship, it was a valuable introduction to optimization based control for robots for me.',
+                   'Although I did not contribute enough work for authorship, it was a valuable introduction to optimization based control for me.',
       link: 'https://www.taekyung.me/online-adaptive-cbf',
     },
   ]},
