@@ -30,7 +30,7 @@ export const socials: Socials[] = [
   {
     label: 'Google Scholar',
     href: 'https://scholar.google.com/citations?user=S7uwOAEAAAAJ&hl=en',
-    icon: '<i class="ai ai-google-scholar-square ai-3x"></i>', // Always use the ai-lg class for Academic Icons
+    icon: '<i class="ai ai-google-scholar-square ai-lg"></i>', // Always use the ai-lg class for Academic Icons
   },
 ];
 
