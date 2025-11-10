@@ -79,6 +79,7 @@ import phatImage from '@/assets/PHat.jpg'
 import hopperv2Image from '@/assets/hopperv2.webp'
 import sfbImage from '@/assets/sfbtail.webp'
 import gearboxImage from '@/assets/gearbox.png'
+import bipedImage from '@/assets/biped.png'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
@@ -122,6 +123,12 @@ export const ongoingWork: ProjectsList[] = [
                    " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
                    " rated torque of 3Nm." ,
       // link: '/gearbox//',
+    },
+    {
+      image: bipedImage,
+      title: 'Agile Bio-inspired Tailed Biped with Parallel Elasticity',
+      description: "This is an ongoing project to design the hardware, electronic, and software system of a bipedal robot, using the hopping leg" + 
+                   " and SFB tail as subassemblies."
     }
   ]},
 
