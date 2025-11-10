@@ -37,7 +37,7 @@ export const socials: Socials[] = [
 //// This is the data for the research works
 import { type ResearchInfo } from '@/types';
 import exoImage from '@/assets/exoImage.png'
-// import sparrowsImage from '@/assets/sparrows.jpg'
+import hopperImage from '@/assets/hopperv1.webp'
 // import selmapImage from '@/assets/sel_map.png'
 
 export const research: ResearchInfo[] = [
@@ -47,7 +47,6 @@ export const research: ResearchInfo[] = [
     authors: [
       'Yichen Wang',
       'José Montes Pérez',
-      'Challen Enninful Adu',
       'Robert D Gregg',
       'Gray C. Thomas',
     ],
@@ -56,12 +55,26 @@ export const research: ResearchInfo[] = [
     link: 'https://ieeexplore.ieee.org/abstract/document/11062962',
     review: false,
   },
+  {
+    image: hopperImage,
+    title: 'Kinodynamic Model Predictive Control for Energy Efficient Locomotion of Legged Robots with Parallel Elasticity',
+    authors: [
+      'Yulun Zhuang',
+      'Yichen Wang',
+      'Yanran Ding',
+    ],
+    journal: '2025 IEEE International Conference on Robotics and Automation (ICRA)',
+    time: '2025',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11128416/',
+    review: false,
+  }
 ];
 
 //// This is the data for the projects
 import { type ProjectsList } from '@/types';
 // import sevaImage from '@/assets/seva.jpeg'
-// import zonopyImage from '@/assets/zonopy.webp'
+import mpccbfImage from '@/assets/tkImage.gif'
+import { hasAssetPropagationFlag } from 'node_modules/astro/dist/content/utils';
 // import marlImage from '@/assets/marl.webp'
 // import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
 // import rtdImage from '@/assets/rtd.gif'
@@ -72,13 +85,13 @@ export const projectsLists: ProjectsList[] = [
     title: 'Contributor',
     items: [
     {
-      title: 'CleanTwrpTar',
-      info: 'Basic C program written to recover my corrupted phone backups',
-      description: 'Back in 2017, I was restoring my phone from a TWRP nandroid backup, and discovered that all of my backups were corrupted. '+
-        'After inspection, it turned out that one of the other standard streams used for verbose logging occasionally output to the tarfile. ' +
-        'This program was written to remove strings inserted between the 512 byte data block boundaries where these logging strings were inserted. ' +
-        'A friend and I wrote separate solutions to this problem, and we have saved countless others\' backups as a result.',
-      link: 'https://github.com/BuildingAtom/CleanTwrpTar',
+      image: mpccbfImage,
+      title: 'Online Adaptive ICCBF',
+      info: 'Learning to Refine Input Constrained Control Barrier Functions via Uncertainty-Aware Online Parameter Adaptation',
+      description: 'I helped Taekyung Kim write simple a 3D quadcopter model and controller for the adaptive ICCBF controller as a part of a course project. ' +
+                   'Although I did not contribute enough work for authorship, it was a valuable introduction to optimization based control for robots for me.',
+      link: 'https://www.taekyung.me/online-adaptive-cbf',
     },
   ]},
+
 ];
