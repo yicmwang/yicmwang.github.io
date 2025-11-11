@@ -1,0 +1,36 @@
+---
+import Layout from '@/layouts/base.astro'
+import { coreSettings } from '@/settings'
+import {projectsLists } from '@/data'
+import Hero from '@/components/Hero.astro'
+import ArticleList from '@/components/cards/ArticleList.astro'
+import ProjectList from '@/components/cards/ProjectList.astro'
+
+const { name } = coreSettings
+
+export async function getStaticPaths() {
+  var projArr = projectsLists.map(projectsList => (projectsList.items
+    )).flat()
+  var filterProjArr = projArr.filter(Boolean)
+  var nameArray = filterProjArr.map(projInfo => projInfo.name)
+  var filterNameArray = nameArray.filter(Boolean)
+  return filterNameArray.map((name) => ({params: {project: name}}))
+  // var nameArr = projArr.map(ProjectInfo => ProjectInfo.map(ProjectInfo => ProjectInfo.name))
+  // var names = nameArr.flat();
+  // var filteredNames = names.filter(Boolean)
+  // var returnArray = filteredNames.map((projName) => {params: {project: projName}})
+  // // console.log(filteredNames)
+  // console.log(returnArray)
+  // return [{params: {project: 'PHat'}}]
+}
+
+---
+
+<Layout>
+  {projectsLists.map(projectsList => (
+    projectsList.items.length > 0 && !projectsList.disabled &&
+    <section class='py-8 border-b'>
+      <ProjectList title={projectsList.title} items={projectsList.items}/>
+    </section>
+  ))}
+</Layout>

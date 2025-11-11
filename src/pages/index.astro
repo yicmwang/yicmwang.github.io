@@ -1,7 +1,7 @@
 ---
 import Layout from '@/layouts/base.astro'
 import { coreSettings } from '@/settings'
-import { research, projectsLists, ongoingWork } from '@/data'
+import { research, projectsLists } from '@/data'
 import Hero from '@/components/Hero.astro'
 import ArticleList from '@/components/cards/ArticleList.astro'
 import ProjectList from '@/components/cards/ProjectList.astro'
@@ -19,13 +19,6 @@ const { name } = coreSettings
     <ArticleList listTitle='Research Work' listItems={research} />
   </section>
   )}
-
-  {ongoingWork.map(projectsList => (
-    projectsList.items.length > 0 && !projectsList.disabled &&
-    <section class='py-8 border-b'>
-      <ProjectList title={projectsList.title} items={projectsList.items}/>
-    </section>
-  ))}
 
   {projectsLists.map(projectsList => (
     projectsList.items.length > 0 && !projectsList.disabled &&

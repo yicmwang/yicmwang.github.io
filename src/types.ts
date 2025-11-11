@@ -37,6 +37,8 @@ export interface ProjectInfo {
   link?: string,
   disabled?: boolean,
   hide?: boolean,
+  name?: string,
+  blurb?: (string | ImageMetadata)[]
 };
 
 export interface ProjectsList {
@@ -50,3 +52,4 @@ export interface Socials {
   href: string,
   icon: string,
 };
+

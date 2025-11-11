@@ -67,6 +67,7 @@ export const research: ResearchInfo[] = [
     time: '2025',
     link: 'https://ieeexplore.ieee.org/abstract/document/11128416/',
     review: false,
+    dontOptimizeImage: true,
   }
 ];
 
@@ -85,7 +86,70 @@ import bipedImage from '@/assets/biped.png'
 
 
 
-export const ongoingWork: ProjectsList[] = [
+// export const ongoingWork: ProjectsList[] = [
+//   {
+//     title: 'Ongoing and Unpublished Work',
+//     items: [
+//     {
+//       image: phatImage,
+//       title: 'Power Hat for Computing Module in Bipedal Robot',
+//       info: 'Power Supply, Protection, and Monitoring Hat for Robot Onboard SBC',
+//       description: 'I lead the project to design a power supply and control hat, compatible with the Rasberry Pi and UP Xtreme i14 SBCs. ' +
+//                    'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor rails, ' + 
+//                    'overcurrent, undervoltage, and overtemperature protection circuits, and voltage, current, and temperature monitoring.',
+//       // link: '/PHat/',
+//       name: 'Phat', 
+//       blurb: ['whatever1',
+//               'whatever2',
+//               phatImage,
+//               'whatever3'
+//              ]
+//     },
+//     {
+//       image: hopperv2Image,
+//       title: "Hopper V2",
+//       description: "During the hardware tests for the Kinodynamic MPC paper, we found quite a few minor issues with the robot that added up to make working " + 
+//       'with the robot rather frustrating. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
+//       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
+//       // link: '/hopperv2/',
+//       name: 'hopperv2',
+//       dontOptimizeImage: true,
+
+//     },
+//     {
+//       image: sfbImage,
+//       title: "Spherical Five Bar (SFB) linkage based tail module",
+//       description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed" +  
+//                    "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
+//                    "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. ",
+//       // link: '/sfb/',
+//       name: 'sfb',
+//       dontOptimizeImage: true,
+//     },
+//     {
+//       image: gearboxImage,
+//       title: "Lightweight QDD motor module for tail",
+//       description: "During the initial conceptualization for the tail module, I realized that no motor module on the market met the specific mass"+
+//                    " and torque requirements necessary. I therefore designed a lightweight gearmotor module using a drone motor as the base," + 
+//                    " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
+//                    " rated torque of 3Nm." ,
+//       // link: '/gearbox//',
+//       name: 'gearbox'
+//     },
+//     {
+//       image: bipedImage,
+//       title: 'Agile Bio-inspired Tailed Biped with Parallel Elasticity',
+//       description: "This is an ongoing project to design the hardware, electronic, and software system of a bipedal robot, using the hopping leg" + 
+//                    " and SFB tail as subassemblies.", 
+//       name: 'biped'
+//     }
+//   ]},
+
+// ];
+
+
+export const projectsLists: ProjectsList[] = [
+
   {
     title: 'Ongoing and Unpublished Work',
     items: [
@@ -97,6 +161,12 @@ export const ongoingWork: ProjectsList[] = [
                    'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor rails, ' + 
                    'overcurrent, undervoltage, and overtemperature protection circuits, and voltage, current, and temperature monitoring.',
       // link: '/PHat/',
+      name: 'Phat', 
+      blurb: ['whatever1',
+              'whatever2',
+              phatImage,
+              'whatever3'
+             ]
     },
     {
       image: hopperv2Image,
@@ -105,6 +175,8 @@ export const ongoingWork: ProjectsList[] = [
       'with the robot rather frustrating. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
       // link: '/hopperv2/',
+      name: 'hopperv2',
+      dontOptimizeImage: true,
 
     },
     {
@@ -114,6 +186,8 @@ export const ongoingWork: ProjectsList[] = [
                    "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
                    "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. ",
       // link: '/sfb/',
+      name: 'sfb',
+      dontOptimizeImage: true,
     },
     {
       image: gearboxImage,
@@ -123,19 +197,16 @@ export const ongoingWork: ProjectsList[] = [
                    " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
                    " rated torque of 3Nm." ,
       // link: '/gearbox//',
+      name: 'gearbox'
     },
     {
       image: bipedImage,
       title: 'Agile Bio-inspired Tailed Biped with Parallel Elasticity',
       description: "This is an ongoing project to design the hardware, electronic, and software system of a bipedal robot, using the hopping leg" + 
-                   " and SFB tail as subassemblies."
+                   " and SFB tail as subassemblies.", 
+      name: 'biped'
     }
   ]},
-
-];
-
-
-export const projectsLists: ProjectsList[] = [
   {
     title: 'Contributor',
     items: [
@@ -148,5 +219,4 @@ export const projectsLists: ProjectsList[] = [
       link: 'https://www.taekyung.me/online-adaptive-cbf',
     },
   ]},
-
 ];
