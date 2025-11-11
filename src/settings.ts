@@ -1,9 +1,9 @@
 import type { CoreSettings } from "./types"
 
 export const coreSettings : CoreSettings = {
-  lightModeTheme: "fantasy",
-  darkModeTheme: "dark",
-  defaultTheme: "fantasy",
+  lightModeTheme: "cupcake",
+  darkModeTheme: "night",
+  defaultTheme: "cupcake",
   site: "https://yicmwang.github.io",
   basepath: "",
   name: 'Yichen Wang',
