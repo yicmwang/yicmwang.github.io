@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import { type ProjectInfo } from '@/types';
+
+// interface Props {
+//   item: ProjectInfo;
+// }
+const { item } = Astro.props
+
+---
+
+
+<div class='p-6 rounded-lg text-base-content'>
+  <!-- {item.disabled && <div class="float-right opacity-50 select-none text-xl align-middle ml-2"><i class="fa-solid fa-link-slash text-sm"></i></div>}
+  <h3 class={`text-2xl font-semibold ${item.info ? '' : 'mb-2'}`}>{item.title}</h3>
+  {item.info && <p class='text-sm mb-3 italic text-gray-600'>{item.info}</p>} -->
+  <p class='text-base mb-2'>{item}</p>
+</div>

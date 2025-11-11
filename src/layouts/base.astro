@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from '@/components/ThemeToggle.astro'
+import HomeButton from '@/components/HomeButton.astro'
 import Head from '@/components/Head.astro'
 
 import { coreSettings } from '@/settings'
@@ -27,6 +28,7 @@ const {
     <div class='bg-base-100'>
       <div class='drawer-content bg-base-100'>
         <nav class='navbar lg:max-w-5xl max-w-full mx-auto flex-row-reverse pr-10 pt-5'>
+          <HomeButton/>
           <ThemeToggle/>
         </nav>
         <main class='p-8 pt-8 lg:pt-10 lg:max-w-5xl max-w-full mx-auto min-h-screen flex flex-col justify-between'>

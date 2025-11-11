@@ -28,6 +28,13 @@ export interface ResearchInfo {
   hide?: boolean,
 };
 
+export interface ProjectPage{
+  name: string,
+  title: string,
+  subtitle?: string,
+  blurb: (string | ImageMetadata)[]
+}
+
 export interface ProjectInfo {
   image?: ImageMetadata,
   dontOptimizeImage?: boolean,
@@ -37,8 +44,7 @@ export interface ProjectInfo {
   link?: string,
   disabled?: boolean,
   hide?: boolean,
-  name?: string,
-  blurb?: (string | ImageMetadata)[]
+  pageInfo?: ProjectPage
 };
 
 export interface ProjectsList {

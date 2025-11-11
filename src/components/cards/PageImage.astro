@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import { type ProjectInfo } from '@/types';
+
+// interface Props {
+//   item: ProjectInfo;
+// }
+const { item } = Astro.props
+
+---
+
+{ //Don't optimize the image
+item && 
+  <img
+    src={item.src}
+    height={item.height}
+    width={item.width}
+    alt={item.title}
+    class='max-h-[450px] w-auto sm:h-auto object-cover rounded-lg flex-grow-0 flex-shrink-2 object-center'
+  />
+}

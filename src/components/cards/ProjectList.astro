@@ -15,10 +15,22 @@ const {title, items} = Astro.props
       <div class='flex flex-col sm:flex-row rounded-lg bg-base-200'>
         <ProjectCard item={item} />
       </div>
-      :
+      :(
+      item.link ?
       <a href={item.link} class='flex flex-col sm:flex-row rounded-lg bg-base-200 transition-brightness duration-150 hover:shadow-lg hover:brightness-90' target="_blank">
         <ProjectCard item={item} />
       </a>
+      :(
+        item.pageInfo && item.pageInfo.name?
+        <a href={'/' + item.pageInfo.name} class='flex flex-col sm:flex-row rounded-lg bg-base-200 transition-brightness duration-150 hover:shadow-lg hover:brightness-90'>
+        <ProjectCard item={item} />
+      </a>
+      :
+      <div class='flex flex-col sm:flex-row rounded-lg bg-base-200'>
+        <ProjectCard item={item} />
+      </div>
+      )
+      )
     )
   ))}
 </div>
