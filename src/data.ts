@@ -81,6 +81,11 @@ import hopperv2Image from '@/assets/hopperv2.webp'
 import sfbImage from '@/assets/sfbtail.webp'
 import gearboxImage from '@/assets/gearbox.png'
 import bipedImage from '@/assets/biped.png'
+import phatv1Image from '@/assets/phatv1.png'
+import buckImage from '@/assets/buck.jpg'
+import phatPiImage from '@/assets/phatPi.jpg'
+import phatTeleopImage from '@/assets/phatTeleop.webp'
+import phatSchImage from '@/assets/phatv2.png'
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
@@ -99,16 +104,38 @@ export const projectsLists: ProjectsList[] = [
       description: 'I lead the project to design a power supply and control hat, compatible with the Rasberry Pi and UP Xtreme i14 SBCs. ' +
                    'The board consists of a buck converter capable of either 5V/5A or 25V/4A output, a power switch to supply 50V/80A to 4 motor rails, ' + 
                    'overcurrent, undervoltage, and overtemperature protection circuits, and voltage, current, and temperature monitoring.',
-      // pageInfo: {
-      // name: 'phat', 
-      // title: 'Power Hat for Computing Module in Bipedal Robot',
-      // subtitle: 'Power Supply, Protection, and Monitoring Hat for Robot Onboard SBC',
-      // blurb: ['whatever1',
-      //         'whatever2',
-      //         phatImage,
-      //         'whatever3'
-      //        ]
-      // }
+      pageInfo: {
+      name: 'phat', 
+      title: 'Power Hat for Computing Module in Bipedal Robot',
+      subtitle: 'Power Supply, Protection, and Monitoring Hat for Robot Onboard SBC',
+      blurb: [phatImage,
+              'When we first developed the hopper (MUPS), we just connected the motors directly to the battery with a wire. ' +
+              'That worked, but we found it hard to track the power consumption of the robot, and it felt very sketchy. ' + 
+              'We were afraid we would crash the robot, short a wire, and catch something on fire. ' +
+              'It\s also good practice to have a way of arresting the surge current when we connect a large capacitive load. ' +
+              'So we designed the Power Hat to put all the power electronics in one spot!',
+              'On the project was me, and Junze, our resident electrical engineering undergrad. I designed the majority of the schematic ' + 
+              'and circuit, and Junze did most of the legwork in layout and ordering. I also helped route some important power pours and ' + 
+              'some parts that need special treatment. ', 
+              phatv1Image,
+              'Our first version of the board was riddled with issues. We thought we\'d throw in a buck converter to power '+ 
+              'the Raspberry Pi, but we undersized the inductor and it could not supply enough current. I also spec\'ed a ' +
+              '4kΩ resistor as a 4Ω resistor, which caused a lot of problems. We actually designed an intermediate board to ' +
+              'iron out the kinks of the buck converter before moving on to the full v2. ',
+              buckImage,
+              'You can tell it\'s a test board by the bodge-resistor and half-populated testpoints. I was the only person ' +
+              'capable of soldering 0402 resistors, so I got my year\'s worth of lead fumes assembling that board. ' +
+              'After we were confident we can nail the buck converter, we designed a v2 for the power hat. We slipped ' +
+              'in some extra features, including a switchable voltage buck converter, with a max output of more than 100W.',
+              phatTeleopImage, 
+              'Here is the power hat supplying power to eight motors simultaneously in a stress test using our teleoperation ' + 
+              'demo rig. Its power monitoring capability has already been super useful around the lab. ',
+              phatSchImage,
+              'This is the overall schematic of the power hat, minus the ground plane. The beefy power pours on the bottom left ' +
+              'Are actually copied on all four layers to provide enough current capacity without overheating the board. Even  ' +
+              'though I designed it, I still feel like it\'s a miracle that it actually works.'
+             ]
+      }
     },
     {
       image: hopperv2Image,
