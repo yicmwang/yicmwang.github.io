@@ -7,7 +7,7 @@ export const coreSettings : CoreSettings = {
   site: "https://yicmwang.github.io",
   basepath: "",
   name: 'Yichen Wang',
-  username: "yicmwang@umich.edu",
+  username: "@yicmwang",
 
   title: 'Yichen Wang',
   description: 'A researcher and engineer at the University of Michigan.',
