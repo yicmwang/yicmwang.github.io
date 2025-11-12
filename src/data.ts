@@ -86,6 +86,10 @@ import buckImage from '@/assets/buck.jpg'
 import phatPiImage from '@/assets/phatPi.jpg'
 import phatTeleopImage from '@/assets/phatTeleop.webp'
 import phatSchImage from '@/assets/phatv2.png'
+import tailWideImage from '@/assets/tailwide.webp'
+import sfbMechImage from '@/assets/sfb_pic.png'
+import rsrrMechImage from '@/assets/rsrrMech.png'
+import { MiddlewareNoDataOrNextCalled } from 'node_modules/astro/dist/core/errors/errors-data';
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
@@ -132,8 +136,14 @@ export const projectsLists: ProjectsList[] = [
               'demo rig. Its power monitoring capability has already been super useful around the lab. ',
               phatSchImage,
               'This is the overall schematic of the power hat, minus the ground plane. The beefy power pours on the bottom left ' +
-              'Are actually copied on all four layers to provide enough current capacity without overheating the board. Even  ' +
-              'though I designed it, I still feel like it\'s a miracle that it actually works.'
+              'Are actually copied on all four layers to provide enough current capacity without overheating the board. ' +
+              'I became very afraid of batteries ' +
+              'after the testing of this board, because for a brief week it would explode every time we connected it to a battery. ',
+              phatPiImage,
+              'Turns out, it was because a smoothing resistor caused the voltage on the supply pin to fall under that of a current ' +
+              'sending pin during the power-on transient. It was easily fixed by just removing the resistor, but it did strike fear ' +
+              'into my heart. Even  ' +
+              'though I designed it, it still feels like a miracle that it actually works. '
              ]
       }
     },
@@ -149,20 +159,29 @@ export const projectsLists: ProjectsList[] = [
     {
       image: sfbImage,
       title: "Spherical Five Bar (SFB) linkage based tail module",
-      description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed" +  
+      description: "When designing the bipedal robot, I thought it would be a bit boring if it's just two legs and a body. So I designed " +  
                    "a tail module to do inertial reorientation for the robot! I used an SFB coupled with two custom designed motor modules " + 
                    "to actuate the tail. The motors double as the counterweight to increase tail inertia to eliminate any dead weight. ",
       // link: '/sfb/',
       dontOptimizeImage: true,
-      // pageInfo: {
-      // name: 'sfb',
-      // title: "Spherical Five Bar (SFB) linkage based tail module",
-      // blurb: ['whatever1',
-      //         'whatever2',
-      //         sfbImage,
-      //         'whatever3'
-      //        ]
-      // }
+      pageInfo: {
+      name: 'sfb',
+      title: "Spherical Five Bar (SFB) linkage based tail module",
+      blurb: [tailWideImage,
+              'The tail module has probably been my most challenging project so far. Not that the actual mechanism itself ' +
+              'is particularly complex. All in all, it is just a 2-DoF parallel linkage mechanism; certainly not trivial ' +
+              'but not something unsurmountably difficult. The most time consuming part is the analysis and modeling ' + 
+              'of this mechanism. After all, what use is a robot if nobody knows how to control it?',
+              sfbMechImage,
+              'I ended up teaching myself spherical trigonometry just so I can derive proper Jacobians and kinematic ' +
+              'equations for this thing. A very important sub-problem in this tail design is the design of the actuator ' +
+              'module, which I will detail in a seperate page. ',
+              rsrrMechImage,
+              'I had some doubts about whether or not the SFB linkage is actually an optimal mechanism basis to design around, '+
+              'so I went and designed another mechanism to compare it with, just in case. I also threw the battery of ' +
+              'parallel linkage analysis I had to teach myself at it, for good measure.'
+             ]
+      }
     },
     {
       image: gearboxImage,

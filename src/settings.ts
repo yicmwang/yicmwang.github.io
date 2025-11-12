@@ -10,6 +10,6 @@ export const coreSettings : CoreSettings = {
   username: "yicmwang@umich.edu",
 
   title: 'Yichen Wang',
-  description: 'I am a researcher and engineer at the University of Michigan.',
+  description: 'A researcher and engineer at the University of Michigan.',
   // image: '/images/avatar.png', // Website card image
 }
