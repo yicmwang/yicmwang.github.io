@@ -154,13 +154,13 @@ export const projectsLists: ProjectsList[] = [
       'with the robot rather frustrating. I sat down and designed a new version of it where I ironed out all the issues with assembly, fatigue failures, and sensor integration. ' +
       'The leg is mounted on the a gantry as a preliminary sub-assembly test for a future biped robot.',
       dontOptimizeImage: true,
-      pageInfo: {
-        name: 'hopperv2',
-        title: "Hopper V2",
-        blurb: [
-          ''
-        ]
-      }
+      // pageInfo: {
+      //   name: 'hopperv2',
+      //   title: "Hopper V2",
+      //   blurb: [
+      //     ''
+      //   ]
+      // }
 
     },
     {
