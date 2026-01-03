@@ -1,3 +1,8 @@
+export interface HeroBlurb {
+  profilePicture?: ImageMetadata,
+  paragraphs: string[],
+}
+
 export interface CoreSettings {
   // Site settings
   site: string,

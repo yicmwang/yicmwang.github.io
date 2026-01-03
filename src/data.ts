@@ -1,12 +1,13 @@
 //// This is the data for the hero section
+import { type HeroBlurb } from '@/types'
 import profilePicture from '@/assets/me.jpg'
-export const heroBlurb = {
-  profilePicture: profilePicture,
+export const heroBlurb: HeroBlurb = {
+  // profilePicture: profilePicture,
   paragraphs: [
     'I am a robot researcher and engineer, working on developing hardware and software infrastructure ' +
     'for agile and dextrous walking robots.'
     ,
-    'I am completing my MS in Robotics from the Department of Robotics at the University ' +
+    'I recently completed my MS in Robotics from the Department of Robotics at the University ' +
     'of Michigan. I am a member of the ARCaD Lab, advised by Prof. Yanran Ding. ' +
     'I also completed my BS in Mechanical Engineering from ' +
     'the University of Michigan in 2025.'
