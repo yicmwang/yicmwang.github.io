@@ -1,7 +1,8 @@
 //// This is the data for the hero section
+import { type HeroBlurb } from '@/types'
 import profilePicture from '@/assets/me.jpg'
-export const heroBlurb = {
-  profilePicture: profilePicture,
+export const heroBlurb: HeroBlurb = {
+  // profilePicture: profilePicture,
   paragraphs: [
     'I am a robot researcher and engineer, working on developing hardware and software infrastructure ' +
     'for agile and dextrous walking robots.'
