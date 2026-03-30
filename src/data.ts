@@ -90,6 +90,7 @@ import phatSchImage from '@/assets/phatv2.png'
 import tailWideImage from '@/assets/tailwide.webp'
 import sfbMechImage from '@/assets/sfb_pic.png'
 import rsrrMechImage from '@/assets/rsrrMech.png'
+import rsrrSwingImage from '@/assets/rsrr_swing.webp'
 import { MiddlewareNoDataOrNextCalled } from 'node_modules/astro/dist/core/errors/errors-data';
 // import rtdImage from '@/assets/rtd.gif'
 // import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
@@ -187,7 +188,9 @@ export const projectsLists: ProjectsList[] = [
               rsrrMechImage,
               'I had some doubts about whether or not the SFB linkage is actually an optimal mechanism basis to design around, '+
               'so I went and designed another mechanism to compare it with, just in case. I also threw the battery of ' +
-              'parallel linkage analysis I had to teach myself at it, for good measure.'
+              'parallel linkage analysis I taught myself at it, for good measure.',
+              rsrrSwingImage,
+              'Here it is running a left-right swing motion using a simple workspace PD controller, simulated in Mujoco. Support for closed linkage mechanisms in Mujoco is very helpful, and my IK/FK algorithms works pretty well.'
              ]
       }
     },
