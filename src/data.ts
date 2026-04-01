@@ -103,6 +103,12 @@ export const projectsLists: ProjectsList[] = [
   {
     title: 'Ongoing and Unpublished Work',
     items: [
+      {
+        image: bipedImage,
+        title: 'Agile Bio-inspired Tailed Biped with Parallel Elasticity',
+        description: "This is an ongoing project to design the hardware, electronic, and software system of a bipedal robot, using the hopping leg" + 
+                     " and SFB tail as subassemblies.", 
+      },
     {
       image: phatImage,
       title: 'Power Hat for Computing Module in Bipedal Robot',
@@ -202,12 +208,6 @@ export const projectsLists: ProjectsList[] = [
                    " and coupled it with two 1:4 reduction stages. The end result is module weighing just 215g, with a max torque of 10Nm and" + 
                    " rated torque of 3Nm." ,
       // link: '/gearbox//',
-    },
-    {
-      image: bipedImage,
-      title: 'Agile Bio-inspired Tailed Biped with Parallel Elasticity',
-      description: "This is an ongoing project to design the hardware, electronic, and software system of a bipedal robot, using the hopping leg" + 
-                   " and SFB tail as subassemblies.", 
     }
   ]},
   {
